@@ -630,6 +630,7 @@ opposing_id_ratio| 当前 opposing_id 比例
 代码：qyk/
 
 表名：atec_all_data_feature_201
+
 特征名 | 特征描述
 --- | ---
 month_end_day|月末最后两天
