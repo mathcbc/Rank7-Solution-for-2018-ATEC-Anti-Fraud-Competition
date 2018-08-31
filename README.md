@@ -313,6 +313,7 @@ device_sign_num_lag1day_avg|上一天及之前的 device_sign 天频次平均
 代码：qyk/
 
 表名：atec_all_data_feature_52
+
 特征名 | 特征描述
 --- | ---
 opposing_id_num_1hr_avg|本小时及之前 opposing_id 出现的小时频次平均
