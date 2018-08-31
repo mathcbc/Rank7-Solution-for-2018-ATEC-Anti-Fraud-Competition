@@ -549,6 +549,7 @@ time_interval1|本次交易和上次交易的时间间隔
 代码：qyk/
 
 表名：atec_all_data_feature_53
+
 特征名 | 特征描述
 --- | ---
 same_amt_num|消费金额连续相同次数
