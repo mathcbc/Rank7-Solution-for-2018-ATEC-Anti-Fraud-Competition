@@ -172,7 +172,7 @@ payee_amt_minus_min|收款方金额减最小值
 
 ### 频次特征
 
-代码：qyk/
+代码：qyk/all_data_process.sql
 
 表名：atec_all_data_feature_10
 
@@ -181,6 +181,7 @@ payee_amt_minus_min|收款方金额减最小值
 freq_deal_sum | 过去所有历史交易的频次特征
 freq_deal_1day | 当前一天截止当笔交易的频次特征
 freq_deal_1hr | 当前一小时交易的频次特征
+
 
 ### 补充频次特征
 代码：cbc/feature_engineering/feature_cnt_cbc.sql
@@ -228,7 +229,7 @@ device_sign_cnt_lastday|前一天 device_sign 出现的频次
 card_cert_no_cnt_lastday|前一天 card_cert_no 出现的频次
 
 ### 历史曾出现的最近一天里的频次特征
-代码：qyk/
+代码：qyk/cal_avg_feature.sql
 
 表名：atec_all_data_feature_61
 
@@ -243,7 +244,7 @@ card_cert_no_num_lag1day|card_cert_no出现的频次（历史曾出现的最近�
 
 
 ### 历史所有天里的天平均频次
-代码：qyk/
+代码：qyk/cal_real_avg.sql
 
 表名：atec_all_data_feature_82
 
@@ -255,7 +256,7 @@ device_sign_lag1day_avg_real|device_sign前一天及之前平均频次
 user_id_lag1day_avg_real|付款方前一天及之前平均频次
 
 ### 历史所有小时里的小时平均频次
-代码：qyk/
+代码：qyk/cal_real_avg.sql
 
 表名：atec_all_data_feature_92
 
@@ -286,7 +287,7 @@ device_avg_cnt_clock_subtract|设备id 历史所有相同时钟下的平均频�
 
 
 ### 历史所有相同星期下的星期平均频次
-代码：qyk/
+代码：qyk/statistics_feature.sql
 
 表名：atec_all_data_feature_110
 
@@ -299,7 +300,7 @@ freq_client_ip_weekday_avg|client_ip历史所有相同星期下的平均频次
 freq_device_sign_weekday_avg|device_sign历史所有相同星期下的平均频次
 
 ### 上一天及之前曾出现的天里的平均频次特征
-代码：qyk/
+代码：qyk/cal_avg_feature.sql
 
 表名：atec_all_data_feature_42
 
@@ -310,7 +311,7 @@ client_ip_num_lag1day_avg|上一天及之前的 client_ip 天频次平均
 device_sign_num_lag1day_avg|上一天及之前的 device_sign 天频次平均
 
 ### 历史曾出现的小时里的平均频次特征
-代码：qyk/
+代码：qyk/cal_avg_feature.sql
 
 表名：atec_all_data_feature_52
 
@@ -323,7 +324,7 @@ device_sign_num_1hr_avg|本小时及之前的 device_sign 出现的小时频次�
 
 
 ### 上一次交易特征
-代码：qyk/train1_5train_data_process.sql,  qyk/test1_5test_data_process.sql
+代码：qyk/train_data_process.sql,  qyk/test_data_process.sql
 
 特征名 | 特征含义及描述
 ---|---
@@ -342,7 +343,7 @@ is_oper_channel_same | 支付方式是否项目
 is_pay_scene_same | 支付场景是否相同
 
 ### 上一天金额特征
-代码：qyk/
+代码：qyk/train_data_process.sql, qyk/lastday_amt_feature_test.sql
 
 表名：atec_train_data_feature_4,  atec_test_data_feature_4
 
@@ -354,7 +355,7 @@ lastday_amt_max | lastday交易金额最大
 lastday_amt_min | lastday交易金额最小
 
 ### 过去三天金额的特征
-代码：qyk/
+代码：qyk/train_data_process.sql, last3day_amt_feature.sql
 
 表名：atec_train_data_feature_5, atec_test_data_feature_5
 
@@ -366,7 +367,7 @@ lastThreeday_amt_max | lastThreeday交易金额最大
 lastThreeday_amt_min | lastThreeday交易金额最小
 
 ### 所有历史金额的特征
-代码：qyk/
+代码：qyk/all_data_process.sql
 
 表名：atec_all_data_feature_1
 特征名 | 特征含义及描述
@@ -376,7 +377,7 @@ amt_max | 历史交易金额最大（此交易前）
 amt_min | 历史交易金额最小（此交易前）
 
 ### 历史交易金额和当次消费相减的特征
-代码：qyk/
+代码：qyk/all_data_process.sql
 
 表名：atec_all_data_feature_6
 
@@ -388,7 +389,7 @@ amt_substact_min | 当前金额减去历史金额最小
 
 ### 支付账户的收款特征
 
-代码： qyk/
+代码： qyk/all_data_process.sql
 
 表名：atec_all_data_feature_5
 
@@ -401,7 +402,7 @@ receive_amt_max | 该支付账户本次交易前收款最大额度
 
 
 ### 基于星期属性的特征
-代码：qyk/
+代码：qyk/all_data_process.sql
 
 表名：atec_all_data_feature_11
 
@@ -415,7 +416,7 @@ freq_deal_weekday|截止当前交易周中的第几天累计历史交易频次
 ### 峰度偏度及其他一些统计量
 
 #### 交易金额相关统计量
-代码：qyk/
+代码：qyk/calculate_skewness_kurtosis.sql
 
 表名：atec_all_data_feature_14
 
@@ -427,7 +428,7 @@ kurtosis_amt | 历史交易金额的峰度
 
 #### 一小时频次的偏度和峰度
 
-代码：qyk/
+代码：qyk/calculate_skewness_kurtosis.sql
 
 表名：atec_all_data_feature_24
 
@@ -439,7 +440,7 @@ skewness_freq_1hr | 这一小时及之前的小时交易频次偏度
 kurtosis_freq_1hr | 这一小时及之前的小时交易频次峰度
 
 #### 一天频次的偏度和峰度
-代码：qyk/
+代码：qyk/calculate_skewness_kurtosis.sql
 
 表名：atec_all_data_feature_22
 
@@ -452,8 +453,8 @@ kurtosis_freq_sum1day |  上一天之前的交易频次峰度
 
 
 ### user_id 在各字段下不同值的个数特征（一小时内）
-代码：cbc/feature_engineering/dist_cnt_feature/dist_cnt_1hr_feature.sql
 
+代码：cbc/feature_engineering/dist_cnt_feature/dist_cnt_1hr_feature.sql
 
 表名：uid_dist_cnt_1hr
 
@@ -513,7 +514,7 @@ ip_opposing_id_dist_cnt_1hr|当前ip不同的收款人数目
 ip_ver_dist_cnt_1hr|当前ip不用的版本号数目
 
 ### 时间循环特征
-代码：qyk/
+代码：qyk/calculate_skewness_kurtosis.sql
 
 表名： atec_all_data_feature_25
 
@@ -523,7 +524,7 @@ hour_circu|小时循环特征
 weekday_circu|星期循环特征
 
 ### 过去几次消费的特征
-代码：qyk/
+代码：qyk/calculate_skewness_kurtosis.sql
 
 表名：atec_all_data_feature_26
 
@@ -537,7 +538,7 @@ prev10_amt_max|过去10笔交易金额的最大值
 prev10_amt_avg|过去10笔交易金额的平均值
 
 ### 消费时间间隔特征
-代码：qyk/
+代码：qyk/calculate_skewness_kurtosis.sql
 
 表名：atec_all_data_feature_28
 
@@ -547,7 +548,7 @@ time_interval1|本次交易和上次交易的时间间隔
 
 
 ### 消费金额连续相同次数
-代码：qyk/
+代码：qyk/cal_avg_feature.sql
 
 表名：atec_all_data_feature_53
 
@@ -574,7 +575,7 @@ ip_city_equal_mobile_city|ip市是否等于手机账号市
 ip_city_equal_card_city | ip市是否等于银行卡市
 
 ### 对应字段在user_id下的比例特征
-代码：qyk/
+代码：qyk/ratio_feature.sql
 
 表名：atec_all_data_feature_145
 
@@ -594,7 +595,7 @@ ver_ratio|当前 version 使用比例
 opposing_id_ratio| 当前 opposing_id 比例
 
 ### 节假日特征
-代码：qyk/
+代码：qyk/date_feature.sql
 
 表名：atec_all_data_feature_201
 
