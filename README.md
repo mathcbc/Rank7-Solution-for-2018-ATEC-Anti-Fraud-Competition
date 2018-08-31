@@ -148,7 +148,6 @@ client_ip_ver_dist_cnt|client_ip 不同的版本数目
 
 特征名 | 特征描述
 --- | ---
-payer_amt_sum_1hr|付款方一小时内消费总额
 payer_amt_avg_1hr|付款方一小时内平均金额
 payer_amt_max_1hr|付款方一小时内最大金额
 payer_amt_min_1hr|付款方一小时内最小金额
@@ -370,6 +369,7 @@ lastThreeday_amt_min | lastThreeday交易金额最小
 代码：qyk/all_data_process.sql
 
 表名：atec_all_data_feature_1
+
 特征名 | 特征含义及描述
 ---|---
 amt_avg | 历史交易金额平均（此交易前）
