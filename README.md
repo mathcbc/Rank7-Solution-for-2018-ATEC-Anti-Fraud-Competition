@@ -2,48 +2,8 @@
 ## 赛题描述
 赛题的目的是根据历史交易数据识别当前交易是否为欺诈交易。举办方给出由一段时间内有正负标签样本的支付行为样本和没有标签的支付行为样本组成的训练数据集和一段时间后的某个时间范围内的支付行为样本构成的测试数据集，希望选手们通过机器学习算法和对无标签数据的挖掘在训练集上训练出性能稳定时效性好的模型，能够在测试集上对交易的风险进行精准判断。
 
-### 复赛数据集字段描述
+赛题主页：[https://dc.cloud.alipay.com/index#/topic/intro?id=4&from=alipay][https://dc.cloud.alipay.com/index#/topic/intro?id=4&from=alipay]
 
-<font size='0.5'>
-
-特征名 | 特征描述
-:-: | :-:
-event_id|事件id
-user_id|虚拟用户ID
-gmt_occur|事件发生时间
-client_ip|用户IP
-network|网络类型
-device_sign|设备ID
-info1|信息1
-info2|信息2
-ip_prov|IP省
-ip_city|IP市
-cert_prov|证件省
-cert_city|证件市
-card_bin_prov|支付卡bin省
-card_bin_city|支付卡bin市
-card_mobile_prov|支付账号省
-card_mobile_city|支付账号市
-card_cert_prov|支付卡省
-card_cert_city|支付卡市
-is_one_people|主次双方证件是否一致
-mobile_oper_platform|手机操作平台
-operation_channel|支付方式
-pay_scene|支付场景
-amt|金额
-card_cert_no|虚拟用户证件号
-opposing_id|对方虚拟用户ID
-income_card_no|虚拟用户的收款银行卡号
-income_card_cert_no|虚拟收款用户的证件号
-income_card_mobile|虚拟收款用户的手机号
-income_card_bank_code|收入账号银行代码
-province|收入账号归属省份
-city|虚拟收款用户归属城市
-is_peer_pay|是否代付
-version|版本号
-is_fraud|预测标签
-
-</font>
 
 
 ## 数据编码
