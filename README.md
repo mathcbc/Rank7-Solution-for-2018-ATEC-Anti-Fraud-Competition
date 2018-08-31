@@ -66,7 +66,7 @@ user_id_opposing_id_is_mode|当前 opposing_id 是否为 user_id 的众数
 user_id_ver_is_mode|当前 ver 是否为 user_id 的众数
 
 ### user_id在各字段下不同值的个数特征（历史时间)
-代码：cbc/feature_engineering/user_id_dist_cnt_feature.sql
+代码：cbc/feature_engineering/dist_cnt_feature/user_id_dist_cnt_feature.sql
 
 表名：user_id_dist_cnt_feature_cbc
 
@@ -92,7 +92,7 @@ user_id_ver_dist_cnt|user_id 不同的版本数目
 
 
 ### opposing_id 在各字段下不同值的个数特征（历史时间)
-代码：cbc/feature_engineering/opposing_id_dist_cnt_feature.sql
+代码：cbc/feature_engineering/dist_cnt_feature/opposing_id_dist_cnt_feature.sql
 
 表名：opposing_id_dist_cnt_feature_cbc
 
@@ -118,7 +118,7 @@ opposing_id_ver_dist_cnt|opposing_id 不同的版本数目
 
 
 ### client_ip 在各字段下不同值的个数特征（历史时间)
-代码：cbc/feature_engineering/client_ip_dist_cnt_feature.sql
+代码：cbc/feature_engineering/dist_cnt_feature/client_ip_dist_cnt_feature.sql
 
 表名：client_ip_dist_cnt_feature_cbc
 
